@@ -1,0 +1,28 @@
+Interfaces:
+List - Coleção ordenada que permite elementos duplicados
+Set - Coleção ordenada que não permite elementos duplicados
+
+Classes:
+ArrayList
+    Criar Lista:
+        List<String> nomes = new ArrayList<>(); - Informa o tipo dos elementos da lista (Lista pode apenas adicionar elementos do mesmo tipo)
+        Metodos:
+            add - Adiciona elementos na lista, permite duplicação
+            remove - Remove apenas a primeira ocorrencia, se houver mais de uma ocorrencia do memso elemento
+
+ HashSet
+    Criar HashSet:
+        Set<String> nomes = new HashSet<>();
+
+    Metodos:
+        add - Adiciona elementos ao set, nao permite duplicação, e em ordem aleatória
+        remove -
+        size - retorna o tamanho da coleção
+        contains - vê se o elemento especifico esta presente na lista
+
+ HashMap (Tabela)
+    Criar Map:
+        Map<Integer, String> alunos = new HashMap<>();
+
+    Metodos:
+        put - adiciona valores com a chave de referencia de o valor associado (idades.put(1,"Pedro")
