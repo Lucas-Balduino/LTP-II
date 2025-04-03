@@ -1,0 +1,17 @@
+Herança
+
+Permite a Herança de caracteristicas de outra classe
+
+Sintaxe Heranca
+
+public class SubClasse extends SuperClasse{
+
+}
+
+Utilizado na reutilizacao de codigo
+
+**Heranca Multipla**
+
+        Permite com que uma subclasse herde caracteristicas de mais de uma superclasse,
+    o Java nao permite a herança multipla, com isso se utilizam as Interfaces
+

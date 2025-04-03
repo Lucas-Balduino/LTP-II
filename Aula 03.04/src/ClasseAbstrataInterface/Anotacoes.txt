@@ -1,0 +1,52 @@
+**Classes Abstratas**
+
+        Uma forma de implementar caracteristicas sem um uso ainda determinado
+        Pode possuir atributos
+        Nao pode ter heranca multipla
+        Pode ter construtor
+        Nao pode ser instanciada (Animal animal = new Animal()); - Error
+        Para classes Abstratas as classes filhas tem que ter override dos metodos abstratos
+
+        Ex:
+        abstract class Animal{
+            String nome
+
+            //Construtor
+            public Animal(String nome) {
+                this.nome = nome;
+            }
+
+            //Metodo Abstrato
+            abstract void fazerSom();
+
+            //Metodo Concreto
+            public void dormir() {
+                System.out.println("Dormindo");
+            }
+        }
+
+**Interfaces**
+
+        Define os metodos que as subclasses devem possuir, sem necesariamente explicitar o que esses metodos fazem
+        Pode possuir apenas constantes
+        Pode ter heranca multipla
+        Nao pode ter contrutor
+        Nao pode ser instanciada
+        As subclasses devem fazer o override dos metodos da interface
+
+        Ex:
+        interface Aeronave{
+         void pousar();
+         void decolar();
+        }
+
+        interface Embarcacao{
+            void flutuar();
+        }
+
+        public class Aerobarco implements Aeronave, Embarcacao{
+            @Override
+            public void flutuar(){
+                System.out.println("Flutuando");
+            }
+        }
