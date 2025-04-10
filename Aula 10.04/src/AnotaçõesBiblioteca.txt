@@ -1,0 +1,9 @@
+**Importação de bibliotecas**
+- Fazer o download do arquivo .jar
+- Repositorios Famosos:
+    Maven Repository
+    Apache Repository
+- Criar pasta lib para armazenar as bibliotecas
+
+Para Incluir bibliotecas
+- Utilizar Maven
