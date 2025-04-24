@@ -1,0 +1,254 @@
+Prova:
+2 Disursivas
+8 objetivas
+
+Modificadores de acesso - Saber descrever cada um (public, private, protected, defaut) -> Questao Prova
+public - visivel em qualquer lugar
+private - Visivel apenas na propria classe
+protected - visivel no mesmo pacote em subclasses
+default - visivel apenas no mesmo pacote
+
+Tipos de Atributos
+Instancia - enquanto tiver acesso a memoria, permanecem ao objeto
+Local - em tempo de execucao, pertencem ao metodo
+Static - pertencem a classe, atributo compartilhado -> Questao Prova
+
+
+Herança
+Declaracao (extends)
+Classe pai e filhas
+objetos da classe filha tambem sao objetos da classe pai
+
+Polimorfismo
+sobreescrita - reescrita (mesmo nome) de um metodo com mesmo parametros
+sobrecarga - reescrita (mesmo nome) de um metodo com parametros diferentes
+
+Classe Abstrata
+Abstract Class
+metodos sem codigo - apenas em classes abstratas
+utilizado para mostrar o comportamento esperado das classes filhas, uma definicao para se seguir
+
+Interfaces
+Sem atributos, no maximo constantes
+utilizado para mostrar o comportamento esperado das classes filhas, uma definicao para se seguir
+
+Acoplamento (Boas Praticas)
+Mede a dependencias entre as classes
+Baixo acoplamento é bom
+Ajuda na manutencao do codigo
+
+Coesap (Boas Praticas)
+Indica o foco de uma classe, funcoes especificas
+Alto acoplamento é bom
+Ajuda na manutencao do codigo
+
+Tratamento de Erro
+Try - Tenta executar o codigo, pode dar um erro (Abertura banco de dados)
+Catch - Captura a excecao, tratamento do erro no try, pode ter mais de um bloco catch para cada try (Erro na conexao)
+Finally - Bloco sempre será executado com ou sem erro, opcional (Finalizar conexao com banco de dados)
+
+------------------------------------------------------------------------------------------------------------------------
+
+REVISÃO
+
+Questões de Múltipla Escolha
+1. Qual das alternativas representa um tipo de dado primitivo em Java?
+a) String
+b) Scanner
+c) int (int, float, double, char ...) (x)
+d) Integer
+
+2. Qual modificador de acesso permite que um atributo ou método seja visível apenas dentro da mesma classe?
+a) public
+b) private (x)
+c) protected
+d) default
+
+3. Sobre atributos static, é correto afirmar que:
+a) São criados apenas quando o objeto é instanciado. (Instancia)
+b) Podem ser usados apenas dentro de métodos main.
+c) Pertencem à classe e não às instâncias. (x) ("Global")
+d) São exclusivos para métodos abstratos.
+
+4. Qual palavra-chave em Java é usada para tratar exceções?
+a) catch (x)
+b) error
+c) exception
+d) case
+
+5. Considerando herança em Java, qual opção está correta?
+a) Uma classe pode herdar de várias classes. (Nao permite)
+b) Uma classe pode implementar várias interfaces. (x)
+c) Uma interface pode herdar de uma classe. (Nao pode)
+d) Uma classe concreta não pode estender uma classe abstrata. (Pode)
+
+6. O que representa o conceito de acoplamento fraco em orientação a objetos?
+a) Objetos que compartilham muitos dados entre si.
+b) Objetos que dependem minimamente uns dos outros. (x)
+c) Código centralizado em uma única classe. (Coesao forte)
+d) Relação entre atributos e variáveis locais.
+
+Questões Discursivas
+7. Explique a diferença entre os tipos de dados primitivos e tipos por referência em Java.
+    Tipos primitivos sao nao acompanhao as mudancas em relacoes de atribuicoes entre variaveis, ja os tipos por referencia,
+    acompanham as mudancas entre as variaveis.
+    Primitivos
+    x=10
+    y=x
+    x=20
+    y == 10
+    ---------------
+    Referencia
+    o1 = o2
+    o2.nome = "x"
+    o1.nome == "x"
+
+8. O que são modificadores de acesso? Cite e explique brevemente cada um. -> Questao
+
+9. Qual é a utilidade do static em atributos e métodos? Dê um exemplo prático.
+    Um atributo que pode ser compartilhado entre objetos, nao precisa de um objeto instanciado para ser utilizado
+
+10. Quando se deve usar uma classe abstrata em vez de uma interface?
+
+11. Explique, com suas palavras, o conceito de coesão em uma classe. Por que ela é importante?
+
+12. Em que situações o tratamento de exceções é fundamental em uma aplicação Java?
+    Evita a parada do funcionamento do codigo, informar o usuario do erro
+
+13. Por que o alto acoplamento entre classes é prejudicial ao design de software?
+    Uma alteracao tem muita influencia em outros trechos de codigo atrapalhando a manutencao
+
+Questões de Análise de Código
+
+14. Analise o código abaixo e diga o que será impresso no console:
+public class TesteStatic {
+    static int contador = 0;
+
+    public TesteStatic() {
+        contador++;
+    }
+
+    public static void main(String[] args) {
+        new TesteStatic();
+        new TesteStatic();
+        System.out.println(contador);
+    }
+}
+Pergunta: Qual será a saída do código?
+    "2"
+
+15. Identifique e corrija o erro no código abaixo:
+public class Pessoa {
+    private String nome;
+
+    public void Pessoa(String nome) {
+        this.nome = nome;
+    }
+}
+    R:
+    public class Pessoa {
+        private String nome;
+
+        public Pessoa(String nome) { -> Construtor nao possue retorno
+            this.nome = nome;
+        }
+    }
+
+16. O que o seguinte código está tentando fazer? Está correto?
+interface Animal {
+    void emitirSom() {
+        System.out.println("Som genérico");
+    }
+}
+    R:
+    interface Animal {
+        void emitirSom(); -> metodos nao podem ter conteudo
+        }
+    }
+
+
+17. Observe o código e diga qual é o nível de coesão da classe Aluno. Justifique.
+public class Aluno {
+    String nome;
+    int idade;
+
+    public void calcularSalario() {
+        // Cálculo de salário...
+    }
+
+    public void imprimirDados() {
+        System.out.println(nome + ", " + idade);
+    }
+}
+
+    Baixo nivel de coesao, diversas funcoes que nao tem relacao com a classe
+
+18. Qual é o resultado do código abaixo?
+public class Main {
+    public static void main(String[] args) {
+        try {
+            int x = 5 / 0;
+        } catch (ArithmeticException e) {
+            System.out.println("Erro: " + e.getMessage());
+        }
+    }
+}
+    Execao divisao por 0, "Erro ..."
+
+19. Qual a saída do código a seguir? Justifique.
+abstract class Animal {
+    abstract void fazerSom();
+}
+
+class Cachorro extends Animal {
+    void fazerSom() {
+        System.out.println("Au au!");
+    }
+}
+
+public class Teste {
+    public static void main(String[] args) {
+        Animal a = new Cachorro();
+        a.fazerSom();
+    }
+}
+R: "Au au!"
+
+20 - Considere o seguinte código Java:
+class Produto {
+    String nome;
+    double preco;
+
+    Produto(String nome, double preco) {
+        this.nome = nome;
+        this.preco = preco;
+    }
+
+    void aplicarDesconto(double percentual) {
+        preco = preco - (preco * percentual / 100);
+    }
+
+    void exibir() {
+        System.out.println(nome + " - R$" + preco);
+    }
+}
+
+public class Loja {
+    public static void main(String[] args) {
+        Produto p1 = new Produto("Notebook", 3000.0);
+        Produto p2 = p1; -> referencia
+
+        p2.aplicarDesconto(10);
+        p1.exibir();
+    }
+}
+Pergunta:
+1.	Qual será a saída exibida no console?
+    "Notebook -R$2700"
+2.	O objeto p1 é afetado pela operação realizada com p2? Justifique.
+    Sim, atribuicao por referencia
+3.	O que isso nos mostra sobre os tipos por referência em Java?
+    
+
+
+
