@@ -20,12 +20,12 @@ public class Nacional extends Cliente {
 
     @Override
     public String toString() {
-        return "Nacional{" +
-                "id=" + getId() +
-                ", nome='" + getNome() + '\'' +
-                ", telefone='" + getTelefone() + '\'' +
-                ", email='" + getEmail() + '\'' +
-                ", cpf='" + cpf + '\'' +
-                '}';
+        return "\nCliente Nacional:" +
+               "\nID: " + getId() +
+               "\nNome: " + getNome() +
+               "\nTelefone: " + getTelefone() +
+               "\nEmail: " + getEmail() +
+               "\nCPF: " + cpf;
     }
+
 }

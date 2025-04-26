@@ -32,21 +32,27 @@ public class Main {
 
                 switch (opcao) {
                     case 1:
+                    	clearConsole();
                         menuSecundario("Cadastrar", clienteService, pacoteService, servicoService, scanner);
                         break;
                     case 2:
+                    	clearConsole();
                         menuSecundario("Remover", clienteService, pacoteService, servicoService, scanner);
                         break;
                     case 3:
+                    	clearConsole();
                         menuSecundario("Listar", clienteService, pacoteService, servicoService, scanner);
                         break;
                     case 4:
+                    	clearConsole();
                         menuSecundario("Buscar", clienteService, pacoteService, servicoService, scanner);
                         break;
                     case 5:
+                    	clearConsole();
                         menuContratar(scanner); // Passar o scanner existente
                         break;
                     case 6:
+                    	clearConsole();
                         executando = false;
                         System.out.println("👋 Programa finalizado.");
                         break;
@@ -77,57 +83,110 @@ public class Main {
             scanner.nextLine(); // limpa o buffer
 
             switch (escolha) {
-                case 1:
-                    if (acao.equalsIgnoreCase("Cadastrar")) {
-                        clienteService.cadastrarCliente();
-                    } else if (acao.equalsIgnoreCase("Buscar")) {
-                        clienteService.buscarCliente();
+            case 1:
+            	clearConsole();
+                if (acao.equalsIgnoreCase("Cadastrar")) {
+                    clienteService.cadastrarCliente();
+                } else if (acao.equalsIgnoreCase("Buscar")) {
+                    clienteService.buscarCliente();
+                } else if (acao.equalsIgnoreCase("Listar")) {
+                    clienteService.listarTodosClientes();
+                } else if (acao.equalsIgnoreCase("Remover")) {
+                    clienteService.removerCliente();
+                } else {
+                    System.out.println("⚙️ Função de " + acao.toLowerCase() + " cliente ainda será implementada.");
+                }
+                break;
+            case 2:
+            	clearConsole();
+                if (acao.equalsIgnoreCase("Cadastrar")) {
+                    pacoteService.cadastrarPacote();
+                } else if (acao.equalsIgnoreCase("Listar")) {
+                    pacoteService.listarTodosPacotesComServicos();
+                } else if (acao.equalsIgnoreCase("Buscar")) {
+                    System.out.println("\n=== BUSCAR PACOTE ===");
+                    System.out.println("[1] Buscar Pacote por ID");
+                    System.out.println("[2] Listar Clientes que contrataram Pacote");
+                    System.out.println("[3] Voltar");
+                    System.out.print("Escolha uma opção: ");
+                    int subOpcao = scanner.nextInt();
+                    scanner.nextLine(); // limpar buffer
+
+                    switch (subOpcao) {
+                        case 1:
+                        	clearConsole();
+                            pacoteService.buscarPacotePorId();
+                            break;
+                        case 2:
+                        	clearConsole();
+                            pacoteService.listarClientesPorPacote();
+                            break;
+                        case 3:
+                            return;
+                        default:
+                            System.out.println("❌ Opção inválida.");
                     }
-                    break;
-                case 2:
-                    if (acao.equalsIgnoreCase("Cadastrar")) {
-                        pacoteService.cadastrarPacote();
-                    } else {
-                        System.out.println("⚙️ Função ainda será implementada.");
-                    }
-                    break;
-                case 3:
-                    if (acao.equalsIgnoreCase("Cadastrar")) {
-                        servicoService.cadastrarServico();
-                    } else {
-                        System.out.println("⚙️ Função ainda será implementada.");
-                    }
-                    break;
-	            case 4:
-	                voltar = true;
-	                break;
-	            default:
-	                System.out.println("❌ Opção inválida.");
-	        }
+
+                } else if (acao.equalsIgnoreCase("Remover")) {
+                    pacoteService.deletarPacote();
+                } else {
+                    System.out.println("⚙️ Função de " + acao.toLowerCase() + " pacote ainda será implementada.");
+                }
+                break;
+            case 3:
+            	clearConsole();
+                if (acao.equalsIgnoreCase("Cadastrar")) {
+                    servicoService.cadastrarServico();
+                } else if (acao.equalsIgnoreCase("Listar")) {
+                    servicoService.listarTodosServicos();
+                } else if (acao.equalsIgnoreCase("Buscar")) {
+                    servicoService.buscarServicoPorId();
+                } else if (acao.equalsIgnoreCase("Remover")) {
+                    servicoService.removerServico();
+                } else {
+                    System.out.println("⚙️ Função de " + acao.toLowerCase() + " serviço ainda será implementada.");
+                }
+                break;
+
+            case 4:
+            	clearConsole();
+                voltar = true;
+                break;
+            default:
+                System.out.println("❌ Opção inválida.");
+        }
+
+
 
         }
     }
 
 
     private static void menuContratar(Scanner scanner) {
+        ClienteService clienteService = new ClienteService(scanner);
+        PacoteService pacoteService = new PacoteService(scanner);
         boolean voltar = false;
 
         while (!voltar) {
             System.out.println("\n=== CONTRATAR ===");
-            System.out.println("[1] Pacotes");
-            System.out.println("[2] Serviços");
+            System.out.println("[1] Pacotes (Cliente contratar Pacote)");
+            System.out.println("[2] Serviços (Adicionar Serviço a Pacote)");
             System.out.println("[3] Voltar ao menu principal");
             System.out.print("Escolha uma opção: ");
             int escolha = scanner.nextInt();
+            scanner.nextLine(); // limpar buffer
 
             switch (escolha) {
                 case 1:
-                    System.out.println("⚙️ Contratar pacote (função ainda será implementada)");
+                	clearConsole();
+                    clienteService.contratarPacote();
                     break;
                 case 2:
-                    System.out.println("⚙️ Contratar serviço (função ainda será implementada)");
+                	clearConsole();
+                    pacoteService.contratarServicoParaPacote();
                     break;
                 case 3:
+                	clearConsole();
                     voltar = true;
                     break;
                 default:
@@ -135,4 +194,11 @@ public class Main {
             }
         }
     }
+    
+    public static void clearConsole() {
+        for (int i = 0; i < 50; i++) {
+            System.out.println();
+        }
+    }
+
 }

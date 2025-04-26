@@ -163,5 +163,38 @@ public class PacoteDao {
             DataBaseConnection.desconectar(conn);
         }
         return servicos;
-}
+    }
+    
+    public boolean pacoteEstaContratado(Long pacoteId) throws SQLException {
+        Connection conn = null;
+        try {
+            conn = DataBaseConnection.getConnection();
+
+            // Verificar em nacional_pacotes
+            String sqlNacional = "SELECT * FROM nacional_pacotes WHERE pacote_id = ?";
+            PreparedStatement stmtNacional = conn.prepareStatement(sqlNacional);
+            stmtNacional.setLong(1, pacoteId);
+            ResultSet rsNacional = stmtNacional.executeQuery();
+            if (rsNacional.next()) {
+                return true;
+            }
+
+            // Verificar em estrangeiro_pacotes
+            String sqlEstrangeiro = "SELECT * FROM estrangeiro_pacotes WHERE pacote_id = ?";
+            PreparedStatement stmtEstrangeiro = conn.prepareStatement(sqlEstrangeiro);
+            stmtEstrangeiro.setLong(1, pacoteId);
+            ResultSet rsEstrangeiro = stmtEstrangeiro.executeQuery();
+            if (rsEstrangeiro.next()) {
+                return true;
+            }
+
+            return false;
+
+        } finally {
+            if (conn != null) {
+                DataBaseConnection.desconectar(conn);
+            }
+        }
+    }
+
 }

@@ -20,12 +20,12 @@ public class Estrangeiro extends Cliente {
 
     @Override
     public String toString() {
-        return "Estrangeiro{" +
-                "id=" + getId() +
-                ", nome='" + getNome() + '\'' +
-                ", telefone='" + getTelefone() + '\'' +
-                ", email='" + getEmail() + '\'' +
-                ", passaporte='" + passaporte + '\'' +
-                '}';
+        return "\nCliente Estrangeiro:" +
+               "\nID: " + getId() +
+               "\nNome: " + getNome() +
+               "\nTelefone: " + getTelefone() +
+               "\nEmail: " + getEmail() +
+               "\nPassaporte: " + passaporte;
     }
+
 }
