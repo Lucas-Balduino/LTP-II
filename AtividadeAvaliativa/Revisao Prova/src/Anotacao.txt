@@ -248,7 +248,7 @@ Pergunta:
 2.	O objeto p1 é afetado pela operação realizada com p2? Justifique.
     Sim, atribuicao por referencia
 3.	O que isso nos mostra sobre os tipos por referência em Java?
-    
+
 
 
 

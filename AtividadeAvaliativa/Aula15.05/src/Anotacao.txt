@@ -1,0 +1,32 @@
+Interfaces Gráficas:
+No Java, as interfaces graficas nativas sao AWT, Swing (Projeto final), JavaFX
+AWT é pesado, tempo de execucao lento, biblioteca mais antiga, poucos componentes, dificil de customizar
+Swing é leve, tempo de execucao rapido, biblioteca recente, extencao do AWT
+JavaFX mudanca dos nomes dos componentes, permite o uso de css para estilizacao da interface grafica, nao é nativo
+requer um JDK especifico para utilizar Java FX
+
+Criacao de Interfaces graficas no Java:
+Atraves de classes, serao incorporados componentes aos frames
+GUI Fomrs, facilita a criacao com o design
+
+Principais componentes:
+JFrame - Frame Principal, Base
+JLabel - Texto descritivo
+JTextField - Input
+JButton - Botao
+JCheckBox
+JComboBox
+JList
+
+Layout
+Determina o tamanho e posicionamento dos componentes
+- FlowLayout:
+Organiza dos componentes da esquerda para a direita, quando nao há mais espaco, quebra a linha
+Dá responsividade para o frame
+
+-BorderLayout:
+Divide o Container em 5 areas: Centro, Norte, Sul, Leste, Oeste
+Cada área pode conter um unico componente
+
+-GridLayout:
+Divide em linhas e colunas iguais, todos os componentes ocupam o mesmo espaco
