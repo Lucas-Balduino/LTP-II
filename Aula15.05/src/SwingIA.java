@@ -14,7 +14,7 @@ public class SwingIA extends JFrame implements ActionListener {
         setTitle("Exemplo Swing");
         setSize(350, 180);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(new FlowLayout());
+        //setLayout(new FlowLayout());
 
         // Criação dos componentes
         label = new JLabel("Digite algo:");

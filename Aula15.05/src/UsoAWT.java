@@ -6,7 +6,7 @@ public class UsoAWT {
         Button button = new Button("Click Me");
         frame.add(button);
         frame.setSize(300,200);
-        frame.setLayout(new FlowLayout());
+        //frame.setLayout(new FlowLayout());
         frame.setVisible(true);
     }
 }

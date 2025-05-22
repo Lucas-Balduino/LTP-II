@@ -12,7 +12,7 @@ public class AWTIA extends Frame implements ActionListener {
         // Configurações da janela
         setTitle("Exemplo AWT");
         setSize(300, 150);
-        setLayout(new FlowLayout());
+        //setLayout(new FlowLayout());
 
         // Criação dos componentes
         label = new Label("Digite algo:");

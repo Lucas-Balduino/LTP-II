@@ -7,7 +7,7 @@ public class UsoSwing {
         JButton button = new JButton("Click Me");
         frame.add(button);
         frame.setSize(300,200);
-        frame.setLayout(new FlowLayout());
+        //frame.setLayout(new FlowLayout());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Funcionamento do botao de fechar para encerrar o programa
         frame.setVisible(true);
     }

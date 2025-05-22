@@ -8,11 +8,11 @@ public class FlowLayout {
     JButton button5;
 
     public static void main(String[] args) {
-        setLayout(new FlowLayout());
+        //setLayout(new FlowLayout());
 
         JFrame frame = new JFrame("FlowLayout");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        button1 = new JButton();
+        //button1 = new JButton();
 
     }
 }

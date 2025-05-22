@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7d20eb1a-68de-4464-adda-d812910c132c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Aula15.05/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula15.05/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula15.05/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula15.05/src/AWTIA.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula15.05/src/AWTIA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula15.05/src/ExercicioBorderLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula15.05/src/ExercicioBorderLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula15.05/src/ExercicioGridLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula15.05/src/ExercicioGridLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula15.05/src/FlowLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula15.05/src/FlowLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula15.05/src/GUIForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula15.05/src/GUIForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula15.05/src/SwingIA.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula15.05/src/SwingIA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula15.05/src/UsoAWT.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula15.05/src/UsoAWT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula15.05/src/UsoSwing.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula15.05/src/UsoSwing.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2xRtbzV00BWG5OmVzrZXJx3yp9d" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CalculadoraPanel.executor": "Run",
+    "Application.ExercicioCheckBox.executor": "Run",
+    "Application.JLabelCor.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/lucas.balduino/LTP-II/Aula22.05",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/lucas.balduino/LTP-II/AtividadeAvaliativa/Aula22.05/src/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propGUI",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="CalculadoraPanel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CalculadoraPanel" />
+      <module name="Aula22.05" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CalculadoraPanel" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d20eb1a-68de-4464-adda-d812910c132c" name="Changes" comment="" />
+      <created>1747912791237</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747912791237</updated>
+      <workItem from="1747912792285" duration="9760000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
