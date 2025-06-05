@@ -81,6 +81,6 @@ public class ExercicioCheckBox {
     }
 
     private void createUIComponents() {
-        Button enviarButton = new Button("Enviar", icon);
+        //Button enviarButton = new Button("Enviar", icon);
     }
 }
